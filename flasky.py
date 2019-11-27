@@ -22,8 +22,6 @@ def deploy():
     # ensure all users are following themselves
     User.add_self_follows()
 
-
-
 @app.shell_context_processor
 def make_shell_context():
     return dict(db=db, User=User, Role=Role)
