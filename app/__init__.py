@@ -6,9 +6,10 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_pagedown import PageDown
 from config import config
+from flask_sendgrid import SendGrid
 
 bootstrap = Bootstrap()
-mail = Mail()
+mail = SendGrid()
 moment = Moment()
 db = SQLAlchemy()
 pagedown = PageDown()
