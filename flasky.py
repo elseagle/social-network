@@ -2,9 +2,14 @@ import os
 import click
 from flask_migrate import Migrate
 from app import create_app, db
-from app.models import User, Role
 from flask_migrate import upgrade
 from app.models import Role, User
+import os
+from dotenv import load_dotenv
+
+dotenv_path = os.path.join(os.path.dirname(__file__), '.env')
+if os.path.exists(dotenv_path):
+    load_dotenv(dotenv_path)
 
 app = create_app(os.getenv('FLASK_CONFIG') or 'default')
 migrate = Migrate(app, db)
