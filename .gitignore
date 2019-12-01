@@ -1,5 +1,6 @@
 *.py[cod]
 .env
+.env-mysql
 
 # C extensions
 *.so
